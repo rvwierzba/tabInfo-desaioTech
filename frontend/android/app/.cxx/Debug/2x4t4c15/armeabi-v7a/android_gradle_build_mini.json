@@ -1,0 +1,61 @@
+{
+  "buildFiles": [
+    "C:\\DEV\\desafio_vaga\\frontend\\node_modules\\@react-native-async-storage\\async-storage\\android\\build\\generated\\source\\codegen\\jni\\CMakeLists.txt",
+    "C:\\DEV\\desafio_vaga\\frontend\\node_modules\\react-native-safe-area-context\\android\\src\\main\\jni\\CMakeLists.txt",
+    "C:\\DEV\\desafio_vaga\\frontend\\node_modules\\react-native-screens\\android\\src\\main\\jni\\CMakeLists.txt",
+    "C:\\DEV\\desafio_vaga\\frontend\\node_modules\\react-native\\ReactAndroid\\cmake-utils\\default-app-setup\\CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "C:\\Android\\sdk\\cmake\\3.22.1\\bin\\ninja.exe",
+      "-C",
+      "C:\\DEV\\desafio_vaga\\frontend\\android\\app\\.cxx\\Debug\\2x4t4c15\\armeabi-v7a",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "C:\\Android\\sdk\\cmake\\3.22.1\\bin\\ninja.exe",
+    "-C",
+    "C:\\DEV\\desafio_vaga\\frontend\\android\\app\\.cxx\\Debug\\2x4t4c15\\armeabi-v7a",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {
+    "react_codegen_safeareacontext::@7984cd80db47aa7b952a": {
+      "artifactName": "react_codegen_safeareacontext",
+      "abi": "armeabi-v7a",
+      "output": "C:\\DEV\\desafio_vaga\\frontend\\android\\app\\build\\intermediates\\cxx\\Debug\\2x4t4c15\\obj\\armeabi-v7a\\libreact_codegen_safeareacontext.so",
+      "runtimeFiles": [
+        "C:\\Users\\rafae\\.gradle\\caches\\8.14.1\\transforms\\3ba4db1ae352eb90610ca685a00c889a\\transformed\\fbjni-0.7.0\\prefab\\modules\\fbjni\\libs\\android.armeabi-v7a\\libfbjni.so",
+        "C:\\Users\\rafae\\.gradle\\caches\\8.14.1\\transforms\\89ee2d71482aa90a74abf94579aa4b78\\transformed\\react-android-0.80.0-debug\\prefab\\modules\\jsi\\libs\\android.armeabi-v7a\\libjsi.so",
+        "C:\\Users\\rafae\\.gradle\\caches\\8.14.1\\transforms\\89ee2d71482aa90a74abf94579aa4b78\\transformed\\react-android-0.80.0-debug\\prefab\\modules\\reactnative\\libs\\android.armeabi-v7a\\libreactnative.so"
+      ]
+    },
+    "react_codegen_rnscreens::@25bcbd507e98d3a854ad": {
+      "artifactName": "react_codegen_rnscreens",
+      "abi": "armeabi-v7a",
+      "output": "C:\\DEV\\desafio_vaga\\frontend\\android\\app\\build\\intermediates\\cxx\\Debug\\2x4t4c15\\obj\\armeabi-v7a\\libreact_codegen_rnscreens.so",
+      "runtimeFiles": [
+        "C:\\Users\\rafae\\.gradle\\caches\\8.14.1\\transforms\\89ee2d71482aa90a74abf94579aa4b78\\transformed\\react-android-0.80.0-debug\\prefab\\modules\\reactnative\\libs\\android.armeabi-v7a\\libreactnative.so",
+        "C:\\Users\\rafae\\.gradle\\caches\\8.14.1\\transforms\\89ee2d71482aa90a74abf94579aa4b78\\transformed\\react-android-0.80.0-debug\\prefab\\modules\\jsi\\libs\\android.armeabi-v7a\\libjsi.so",
+        "C:\\Users\\rafae\\.gradle\\caches\\8.14.1\\transforms\\3ba4db1ae352eb90610ca685a00c889a\\transformed\\fbjni-0.7.0\\prefab\\modules\\fbjni\\libs\\android.armeabi-v7a\\libfbjni.so"
+      ]
+    },
+    "appmodules::@6890427a1f51a3e7e1df": {
+      "artifactName": "appmodules",
+      "abi": "armeabi-v7a",
+      "output": "C:\\DEV\\desafio_vaga\\frontend\\android\\app\\build\\intermediates\\cxx\\Debug\\2x4t4c15\\obj\\armeabi-v7a\\libappmodules.so",
+      "runtimeFiles": [
+        "C:\\DEV\\desafio_vaga\\frontend\\android\\app\\build\\intermediates\\cxx\\Debug\\2x4t4c15\\obj\\armeabi-v7a\\libreact_codegen_safeareacontext.so",
+        "C:\\DEV\\desafio_vaga\\frontend\\android\\app\\build\\intermediates\\cxx\\Debug\\2x4t4c15\\obj\\armeabi-v7a\\libreact_codegen_rnscreens.so",
+        "C:\\Users\\rafae\\.gradle\\caches\\8.14.1\\transforms\\3ba4db1ae352eb90610ca685a00c889a\\transformed\\fbjni-0.7.0\\prefab\\modules\\fbjni\\libs\\android.armeabi-v7a\\libfbjni.so",
+        "C:\\Users\\rafae\\.gradle\\caches\\8.14.1\\transforms\\89ee2d71482aa90a74abf94579aa4b78\\transformed\\react-android-0.80.0-debug\\prefab\\modules\\jsi\\libs\\android.armeabi-v7a\\libjsi.so",
+        "C:\\Users\\rafae\\.gradle\\caches\\8.14.1\\transforms\\89ee2d71482aa90a74abf94579aa4b78\\transformed\\react-android-0.80.0-debug\\prefab\\modules\\reactnative\\libs\\android.armeabi-v7a\\libreactnative.so"
+      ]
+    },
+    "react_codegen_rnasyncstorage::@1596841e19ec5b9eeffe": {
+      "artifactName": "react_codegen_rnasyncstorage",
+      "abi": "armeabi-v7a",
+      "runtimeFiles": []
+    }
+  }
+}

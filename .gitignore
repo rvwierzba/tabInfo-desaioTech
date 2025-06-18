@@ -1,0 +1,35 @@
+# Diretórios de build do Android
+frontend/android/app/build/
+frontend/android/.gradle/
+frontend/android/build/
+
+# Diretórios de build do iOS
+frontend/ios/build/
+
+# Arquivos de log
+frontend/*.log
+
+# Diretórios de dependências
+frontend/node_modules/
+frontend/npm-debug.log
+frontend/yarn-error.log
+
+# Arquivos gerados pelo Android Studio / VSCode
+frontend/.idea/
+frontend/.vscode/
+frontend/*.iml
+frontend/*.hprof
+
+# APKs e outros outputs
+frontend/*.apk
+frontend/*.aab
+
+# Arquivos específicos do sistema operacional
+frontend/.DS_Store
+frontend/Thumbs.db
+
+# Ignorar o diretório de dados do MySQL
+backend/mysql_data/
+
+# Ou, se preferir ignorar apenas o arquivo de socket e outros arquivos específicos
+backend/mysql_data/mysql.sock

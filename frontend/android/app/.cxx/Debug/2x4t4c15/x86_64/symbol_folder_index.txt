@@ -1,0 +1,1 @@
+C:\DEV\desafio_vaga\frontend\android\app\build\intermediates\cxx\Debug\2x4t4c15\obj\x86_64
