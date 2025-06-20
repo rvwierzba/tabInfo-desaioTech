@@ -19,7 +19,8 @@ class Connection {
 
             try {
                 // String de conexão para PostgreSQL, incluindo o SSL obrigatório
-                $dsn = "pgsql:host={$host};port={$port};dbname={$dbName};sslmode=require";
+                $dsn = "pgsql:host={$host};port={$port};dbname={$dbName}";
+                
                 
                 self::$instance = new PDO($dsn, $user, $pass);
                 self::$instance->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
