@@ -1,7 +1,8 @@
 # Usaremos a imagem oficial do PHP que já vem com o servidor Apache.
 FROM php:8.2-apache
 
-# ATUALIZAÇÃO AQUI: Atualiza os pacotes do sistema e depois instala as dependências.
+# ATUALIZAÇÃO AQUI: apt-get upgrade -y atualiza todas as bibliotecas do sistema
+# para as versões mais recentes, incluindo as de SSL, antes de instalar nossas extensões.
 RUN apt-get update && apt-get upgrade -y && apt-get install -y \
     libpq-dev \
     && docker-php-ext-install pdo pdo_mysql pdo_pgsql
