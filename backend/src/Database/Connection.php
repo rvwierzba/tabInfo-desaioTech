@@ -19,7 +19,7 @@ class Connection {
 
             try {
                 // String de conexão para PostgreSQL
-                $dsn = "pgsql:host={$host};port={$port};dbname={$dbName}";
+                $dsn = "pgsql:host={$host};port={$port};dbname={$dbName}; sslmode=require";
                 self::$instance = new PDO($dsn, $user, $pass);
                 self::$instance->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
                 self::$instance->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
