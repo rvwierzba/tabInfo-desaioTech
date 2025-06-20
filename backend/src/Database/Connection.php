@@ -10,23 +10,26 @@ class Connection {
 
     public static function getInstance() {
         if (self::$instance === null) {
-            // Pega as credenciais das variáveis de ambiente do Render
-            $host = getenv('dpg-d1an1pumcj7s73fntglg-a.oregon-postgres.render.com');
-            $port = getenv('5432');
-            $dbName = getenv('bd_desafio_tabinfo');
-            $user = getenv('bd_desafio_tabinfo_user');
-            $pass = getenv('oGfTDbf3JcynZU3SOZF9kmVPNyUUKQWA');
+            // Pega as credenciais das variáveis de ambiente que definimos no Render
+            $host = getenv('DB_HOST');
+            $port = getenv('DB_PORT');
+            $dbName = getenv('DB_NAME');
+            $user = getenv('DB_USER');
+            $pass = getenv('DB_PASS');
 
             try {
-                // String de conexão para PostgreSQL
+                // String de conexão para PostgreSQL, incluindo o SSL obrigatório
                 $dsn = "pgsql:host={$host};port={$port};dbname={$dbName};sslmode=require";
+                
                 self::$instance = new PDO($dsn, $user, $pass);
                 self::$instance->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
                 self::$instance->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+
             } catch (PDOException $e) {
                 header("Content-Type: application/json; charset=UTF-8");
                 http_response_code(500);
-                echo json_encode(['status' => 'error', 'message' => 'Erro na conexão com o banco de dados online.']);
+                // Para debug, é útil ver a mensagem de erro real do PDO
+                echo json_encode(['status' => 'error', 'message' => 'Erro na conexão com o banco de dados: ' . $e->getMessage()]);
                 exit;
             }
         }
