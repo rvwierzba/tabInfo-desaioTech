@@ -8,7 +8,7 @@ use \Firebase\JWT\JWT;
 use \Firebase\JWT\Key;
 
 // Chave secreta. Em um projeto real, isso viria de uma variável de ambiente.
-$secret_key = "SUA_CHAVE_SECRETA_SUPER_SECRETA_AQUI";
+$secret_key = "m3u-D3s@f1o-T3ch-Sup3r-S3cr3t0-2025!";
 
 header("Content-Type: application/json; charset=UTF-8");
 header("Access-Control-Allow-Origin: *");
