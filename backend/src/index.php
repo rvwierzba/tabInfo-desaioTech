@@ -21,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
 }
 
 $method = $_SERVER['REQUEST_METHOD'];
-$path = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+$path = $_SERVER['PATH_INFO'] ?? '/';
 
 if ($path === '/register' && $method === 'POST') {
     $data = json_decode(file_get_contents('php://input'), true);

@@ -10,18 +10,24 @@ class Connection {
 
     public static function getInstance() {
         if (self::$instance === null) {
-            $host = 'sql311.infinityfree.com'; 
-            $dbName = 'if0_39266996_desafio';     
-            $user = 'if0_39266996';               
-            $pass = '84795312345678';    
+            // Pega as credenciais das variáveis de ambiente do Render
+            $host = getenv('dpg-d1an1pumcj7s73fntglg-a');
+            $port = getenv('5432');
+            $dbName = getenv('bd-desafio-tabinfo');
+            $user = getenv('bd_desafio_tabinfo_user');
+            $pass = getenv('oGfTDbf3JcynZU3SOZF9kmVPNyUUKQWA');
 
             try {
-                $dsn = "mysql:host={$host};dbname={$dbName};charset=utf8";
+                // String de conexão para PostgreSQL
+                $dsn = "pgsql:host={$host};port={$port};dbname={$dbName}";
                 self::$instance = new PDO($dsn, $user, $pass);
                 self::$instance->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
                 self::$instance->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
             } catch (PDOException $e) {
-                die("Erro na conexão com o banco de dados: " . $e->getMessage());
+                header("Content-Type: application/json; charset=UTF-8");
+                http_response_code(500);
+                echo json_encode(['status' => 'error', 'message' => 'Erro na conexão com o banco de dados online.']);
+                exit;
             }
         }
         return self::$instance;

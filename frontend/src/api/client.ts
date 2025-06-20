@@ -4,7 +4,7 @@ import axios from 'axios';
 // (onde o nosso backend Docker está rodando) é acessado pelo
 // endereço IP especial 10.0.2.2.
 // A porta :8080 é a que definimos no nosso arquivo docker-compose.yml.
-const baseURL = 'http://desafio-tabinfo.free.nf';
+const baseURL = 'http://desafio-tabinfo.free.nf/index.php';
 
 const apiClient = axios.create({
 baseURL: baseURL,
