@@ -11,7 +11,7 @@ class Connection {
     public static function getInstance() {
         if (self::$instance === null) {
             // Pega as credenciais das variáveis de ambiente do Render
-            $host = getenv('dpg-d1an1pumcj7s73fntglg-a');
+            $host = getenv('dpg-d1an1pumcj7s73fntglg-a.oregon-postgres.render.com');
             $port = getenv('5432');
             $dbName = getenv('bd_desafio_tabinfo');
             $user = getenv('bd_desafio_tabinfo_user');
